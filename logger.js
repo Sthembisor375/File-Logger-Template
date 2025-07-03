@@ -4,7 +4,9 @@ import path from "path";
 const filePath = path.join("./", "logs.txt");
 
 function recordToFile(text) {
-  const entry = `\n${text}`;
+  const timeStamp = Date.now();
+  const formattedDate = new Date(timeStamp);
+  const entry = `${formattedDate}: ${text}\n`;
 
   fs.appendFile(filePath, entry, (err) => {
     if (err) {

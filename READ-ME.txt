@@ -1,0 +1,2 @@
+This is a simple function that uses the Node FS module to append a string onto a txt file.
+    
